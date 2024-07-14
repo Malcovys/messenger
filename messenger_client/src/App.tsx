@@ -1,26 +1,23 @@
 import '@/App.css';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import { BrowserRouter, Navigate, NavLink, Route, Routes } from 'react-router-dom';
+import Home from './pages/unAuthenticate/Home';
+import Login from './pages/unAuthenticate/login/Login';
+import Register from './pages/unAuthenticate/register/Register';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
-import Messenger from './pages/Messenger';
+import Messenger from './pages/authenticate/Messenger';
+import NavigationBar from './pages/unAuthenticate/NavigationBar';
 
 function App() {
-  function auth() {
+  function auth() : boolean {
     return useSelector((state: RootState) => state.user.isAuth);
   }
 
   return (
     <BrowserRouter>
-      <div className="container mx-auto min-h-screen max-h-screen">
+      <div className="mx-auto min-h-screen max-h-screen flex flex-col">
         {!auth() && 
-          <nav id='head-bar'>
-            <NavLink to="/">Acceuil</NavLink>
-            <NavLink to="/login">Se connecter</NavLink>
-            <NavLink to="/register">Créer un compte</NavLink>
-          </nav>
+          <NavigationBar/>
         }
         
         <Routes>

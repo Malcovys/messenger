@@ -13,10 +13,16 @@ const fakeUser = {
 export const login = async (data:LoginParams) => {
     // const { email, password } = data;
 
-    return fakeUser;
+    return fakeUser
 }
 
 
 export const register = async (data:RegisterParams) => {
-
+    const { first_name, last_name, email, password } = data;
+    console.log(first_name)
+    console.log(last_name)
+    console.log(email)
+    console.log(password)
+    
+    return true
 }

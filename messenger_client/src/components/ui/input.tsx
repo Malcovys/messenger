@@ -34,7 +34,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
         {beginningType === "password" && (
           <div className="ml-2">
-            <Button size="icon" variant="ghost" onClick={handleClick}>
+            <Button type="button" size="icon" variant="ghost" onClick={handleClick}>
               <EyeIcon type={currentType} />
             </Button>
           </div>

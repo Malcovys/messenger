@@ -22,8 +22,8 @@ const FormSchema = z.object({
   email: z.string().min(1, {
     message: "Le champ est obligatoire",
   }),
-  password: z.string().min(1, {
-    message: "Le champ est obligatoire"
+  password: z.string().min(6, {
+    message: "Minimum 6 caractères"
   })
 })
 

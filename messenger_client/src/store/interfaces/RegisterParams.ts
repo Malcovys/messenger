@@ -1,6 +1,6 @@
 export interface RegisterParams {
-    first_name: string,
-    last_name: string,
-    email: string,
-    password: string
+    first_name: string | undefined,
+    last_name: string | undefined,
+    email: string | undefined,
+    password: string | undefined
 }
