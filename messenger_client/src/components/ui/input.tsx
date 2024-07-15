@@ -5,7 +5,7 @@ import { Eye, EyeOff } from "lucide-react"
 
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
-type InputType = "password" | "text"
+type InputType = "password" | "text" | "file"
 
 const EyeIcon = ({ type }: { type: InputType }) => {
   const size = 20
@@ -22,7 +22,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     }
 
     return (
-      <div className="flex flex-row">
+      <div className="flex flex-row w-full">
         <input
           type={currentType}
           className={cn(

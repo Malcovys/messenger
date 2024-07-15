@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
 import RegisterForm from "./RegisterForm";
-import { RegisterParams } from "@/store/interfaces/RegisterParams";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { register } from "@/services/serviceUser";
+import { RegisterParams } from "./RegisterParams";
+import { useToast } from "@/components/ui/use-toast";
 
 function Register() {
-    const navigate = useNavigate()
+    const { toast } = useToast()
     const [first_name, setFirstName] = useState<string>()
     const [last_name, setLastName] = useState<string>()
     const [email, setEmail] = useState<string>()
@@ -25,8 +25,9 @@ function Register() {
         }
         const res = await register(registerData)
         if(res) {
-            console.log("done")
-            navigate("/login")
+            toast({
+                description: "Votre compte a été créer.",
+            })
         }
     }
 
@@ -34,7 +35,7 @@ function Register() {
         if(first_name && last_name && email && password) {
             fetchRegister()
         }
-    },[first_name, last_name, email, password, navigate])
+    },[first_name, last_name, email, password, toast])
 
     return (
         <div id="register" className="flex justify-center items-center flex-grow">

@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { RegisterParams } from "@/store/interfaces/RegisterParams"
+import { RegisterParams } from "@/pages/unAuthenticate/register/RegisterParams"
 
 interface RegisterProps {
     submitCallback: (data: RegisterParams) => void
@@ -95,7 +95,7 @@ const RegisterForm : React.FC<RegisterProps> = ({ submitCallback })=> {
                     </FormItem>
                 )}
                 />
-                <Button type="submit" className="w-full" variant={"custom"}>S'en registrer</Button>
+                <Button type="submit" className="w-full">S'en registrer</Button>
             </form>
         </Form>
     )

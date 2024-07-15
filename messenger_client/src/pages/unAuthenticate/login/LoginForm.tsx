@@ -65,7 +65,7 @@ const LoginForm : React.FC<LoginProps> = ({ submitCallback })=> {
                     </FormItem>
                 )}
                 />
-                <Button type="submit" className="w-full" variant={"custom"}>Se connecter</Button>
+                <Button type="submit" className="w-full">Se connecter</Button>
             </form>
         </Form>
     )

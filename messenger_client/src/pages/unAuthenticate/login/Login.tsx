@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import LoginForm from "@/pages/unAuthenticate/login/LoginForm";
-import { LoginParams } from "@/store/interfaces/LoginParams";
+import { LoginParams } from "@/pages/unAuthenticate/login/LoginParams";
 import { login } from "@/services/serviceUser";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/store/store";

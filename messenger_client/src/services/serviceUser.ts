@@ -1,5 +1,5 @@
-import { LoginParams } from "@/store/interfaces/LoginParams";
-import { RegisterParams } from "@/store/interfaces/RegisterParams";
+import { LoginParams } from "@/pages/unAuthenticate/login/LoginParams";
+import { RegisterParams } from "@/pages/unAuthenticate/register/RegisterParams";
 
 const fakeUser = {
         "email": "malcovys@gmail.com",
@@ -7,7 +7,7 @@ const fakeUser = {
         "token": "ml455",
         "first_name": "malcovys",
         "last_name": "bonely",
-        "prifileImage_url": "file:///home/malcovys/T%C3%A9l%C3%A9chargements/medium.webp",
+        "prifileImage_url": "https://github.com/shadcn.png",
     }
 
 export const login = async (data:LoginParams) => {

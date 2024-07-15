@@ -8,7 +8,7 @@ const NavigationBar : React.FC = () => {
     }
 
     return(
-        <nav id='head-bar' className="shadow py-3 px-3 flex flex-row ">
+        <nav id='head-bar' className="shadow py-3 px-3 flex flex-row">
             <div className="sm:basis-[57%] md:basis-[65%] lg:basis-[75%] xl:basis-[80%] basis-1/2">
                 <NavLink to="/" style={manager} >Acceuil</NavLink>
             </div>
