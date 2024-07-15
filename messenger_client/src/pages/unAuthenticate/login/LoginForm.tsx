@@ -12,7 +12,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { LoginParams } from "@/store/interfaces/LoginParams"
+import { LoginParams } from "./LoginParams"
 
 interface LoginProps {
     submitCallback: (data: LoginParams) => void

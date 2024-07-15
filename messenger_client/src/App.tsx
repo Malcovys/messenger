@@ -5,7 +5,7 @@ import Register from './pages/unAuthenticate/register/Register';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
-import Messenger from './pages/authenticate/Messenger';
+import Feather from './pages/authenticate/Feather';
 import NavigationBar from './pages/unAuthenticate/NavigationBar';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           <Route path='/' element={ !auth() ? <Home /> : <Navigate to="/app"/> } />
           <Route path='/login' element={ !auth() ? <Login /> : <Navigate to="/app"/> } />
           <Route path='/register' element={ !auth() ? <Register /> : <Navigate to="/app"/> } />
-          <Route  path='/app' element={ auth() ? <Messenger /> : <Navigate to="/"/> } />
+          <Route  path='/app' element={ auth() ? <Feather /> : <Navigate to="/"/> } />
         </Routes>
       </div>
     </BrowserRouter>

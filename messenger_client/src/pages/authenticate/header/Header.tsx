@@ -1,7 +1,7 @@
 import { FeatherIcon } from "lucide-react";
-import Notification from "./notification/Notification.tsx";
-import Profile from "./profile/Profile.tsx";
-import SearchBar from "./search/SearchBar.tsx";
+import Notification from "../notification/Notification.tsx";
+import Profile from "../profile/Profile.tsx";
+import SearchBar from "../search/SearchBar.tsx";
 
 const Header : React.FC = () => {
     return(
