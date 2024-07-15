@@ -3,7 +3,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Input } from "@/components/ui/input"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Search } from "lucide-react"
+import { SearchIcon } from "lucide-react"
 import React from "react"
 
 const tags = Array.from({ length: 50 }).map(
@@ -15,15 +15,15 @@ const SearchBar : React.FC = () => {
     return(
         <Dialog>
             <DialogTrigger asChild>
-                    <Button variant={"outline"} className="h-7 w-40 flex">
-                        <Search color="#94a3b8" size={20}/>
+                    <Button variant={"outline"} className="h-7 w-52 flex justify-start">
+                        <SearchIcon color="#94a3b8" size={20}/>
                         <span className="text-slate-400 ml-5">Recheche...</span>
                     </Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
                     <DialogTitle className="flex h-5 items-center mb-3">
-                            <Search size={25} color="#94a3b8"/>
+                            <SearchIcon size={25} color="#94a3b8"/>
                             <Input id="picture" type="text" 
                             placeholder="Ecrivez votre recherche..."
                             className="w-full outline-none border-none" />

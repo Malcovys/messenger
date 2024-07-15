@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
-import { Bell } from "lucide-react"
+import { BellIcon } from "lucide-react"
 import React from "react"
 
 const tags = Array.from({ length: 50 }).map(
@@ -13,7 +13,7 @@ const Notification : React.FC = () => {
     return(
         <Popover>
             <PopoverTrigger asChild>
-                <Button variant={"ghost"} size={"icon"}><Bell /></Button>
+                <Button variant={"ghost"} size={"icon"}><BellIcon /></Button>
             </PopoverTrigger>
             <PopoverContent>
                 <h5 className="font-bold">Notifications</h5>

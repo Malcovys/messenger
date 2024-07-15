@@ -1,3 +1,4 @@
+import { FeatherIcon } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 const NavigationBar : React.FC = () => {
@@ -8,11 +9,14 @@ const NavigationBar : React.FC = () => {
     }
 
     return(
-        <nav id='head-bar' className="shadow py-3 px-3 flex flex-row">
-            <div className="sm:basis-[57%] md:basis-[65%] lg:basis-[75%] xl:basis-[80%] basis-1/2">
-                <NavLink to="/" style={manager} >Acceuil</NavLink>
+        <nav id='head-bar' className="shadow py-3 px-5 flex flex-row w-full">
+            <div>
+                <NavLink to="/" style={manager} className={"flex"}>
+                    <FeatherIcon/>
+                    <span>feather</span>
+                </NavLink>
             </div>
-            <div className="flex">
+            <div className="flex w-full justify-end">
                 <NavLink to="/login" style={manager} className={"px-2"}>Se connecter</NavLink>
                 <NavLink to="/register" style={manager} className={"px-2"}>Créer un compte</NavLink>
             </div>
